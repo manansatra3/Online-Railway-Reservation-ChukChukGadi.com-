@@ -1,0 +1,115 @@
+<html>
+<head>
+  <title>Railway reservation system</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  
+</head>
+<script type="text/javascript">
+function formvalidation()
+{
+	var uid=document.f12.name;
+
+	var pc=document.f2.tel;
+	var eid=document.f3.email;
+
+
+if(userid_validation(uid,5,12))
+{
+			if(number_validation(pc))
+			{
+				if(email_validation(eid))
+				{
+				
+				}
+			}
+
+	
+}	
+
+return false;
+}
+
+function userid_validation(uid,mx,my)
+{
+	var uid_len=uid.value.length;
+	if(uid_len==0||uid_len>my||uid_len<mx)
+	{
+		alert("user id should not be empty/length between "+mx+" to "+my);
+		uid.focus();
+		
+		return false;
+	}
+	return true;
+}
+
+function number_validation(pc)
+{
+	var letters1 = /^[0-9]+$/;
+	if(pc.value.match(letters1))
+	{
+		return true;
+	}
+	else
+	{
+		alert("user number must have numeric characters only");
+		pc.focus();
+	}
+}
+
+function email_validation(eid)
+{
+var letters2 =/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+
+	if(eid.value.match(letters2))
+	{
+		return true;
+	}
+	else
+	{
+		alert("user Email-Id is not valid");
+		eid.focus();
+	}
+}
+</script>
+<body style="background-size: 100% 110% ">
+
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html"><span class="logo_colour">ChukChukGadi</span></a></h1>
+          <h2>Your <b>Comfort</b> Our <b>Care</b></h2>
+        </div>
+      </div>
+	  <center><div id="feedback">
+	  <h2>24*7 Express Care</h2>
+	 <form action="help.php" method="post" name="f2" onsubmit="return formvalidation()">
+ 	<table border=0>
+	<tr><p><td>Name</td><td><input id="name" name="nm" type="text" class="text" style=" border-radius: 15px; width:90%; height:150%;padding-bottom:10px"></td></p></tr>
+        
+         <tr><p>
+            <td>Phone Number</td><td><input id="tel" name="tel" type="number" class="text" style=" border-radius: 15px; width:90%; height:150%; padding-bottom:10px"></td>
+         </p></tr>
+        
+         <tr><p>
+           <td>Email</td><td><input id="email" name="email" type="email" class="text" style=" border-radius: 15px; width:90%; height:150%; padding-bottom:10px"></td>
+         </p></tr>
+		 <tr><p>
+           <td>Your Query/Feedback</td></tr><tr><td><textarea id="feed" name="feed" class="text" style=" border-radius: 15px; width:200%; height:205%; padding-bottom:10px"></textarea></td>
+         </p></tr>
+		 </table><br>
+		
+		 <table><tr><td><p><button id="registerNew" type="submit"><a href=javascript:alert('Thank you');>Let us Know</a></button></p></td></tr></table>
+
+ </form>
+</div></center>
+    
+	<div id="content_footer" style="padding-top:60px"></div>
+    <div id="footer">
+      <p><a href="index.html">Home</a> | <a href="examples.html">Our Cities</a> | <a href="safety.html">Safety</a> | <a href="help.html">Help Center</a> | <a href="about_us.html">About Us</a> | <a href="legal.html">Legal</a> | <a href="faq.html">FAQ's</a> | <a href="blog.html">Blog</a></p>
+      <center><p>Copyright &copy; ChukChukGadi.com </p></center>
+    </div>
+  </div>
+	  </body></html>
