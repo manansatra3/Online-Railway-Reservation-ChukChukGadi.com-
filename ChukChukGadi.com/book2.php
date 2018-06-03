@@ -39,6 +39,8 @@ session_start();
 
 		$data=mysql_query("select * from trains where Train_name='RANAKPUR EXPRESS' ")or die(mysql_error());
 		
+		if(isset($_POST["no"]))
+		{	
 				$not=$_POST["no"];
 				$in=1;
 				$e=0;
@@ -90,7 +92,7 @@ session_start();
 			{
 				print"<script>alert('Not more Than 4 Tickets Allowed');</script>";
 			}
-			
+		}
 		?>
 	
 	

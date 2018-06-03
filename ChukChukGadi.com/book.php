@@ -36,6 +36,8 @@ session_start();
 		mysql_select_db($dbase_name) or die(mysql_error()); 
 
 		$data=mysql_query("select * from trains where Train_name='Karnavati Express' ")or die(mysql_error());
+		if(isset($_POST["no"]))
+		{
 				$not=$_POST["no"];
 				$_SESSION["no"] = $not ;
 				$in=1;
@@ -88,7 +90,7 @@ session_start();
 			{
 				print"<script>alert('Not more Than 4 Tickets Allowed');</script>";
 			}
-			
+		}	
 		?>
 	
 	
