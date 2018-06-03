@@ -26,21 +26,21 @@ session_start();
 	  <?php
 
 			$name1=$_POST["name1"];
-			$name2=$_POST["name2"];
-			$name3=$_POST["name3"];
-			$name4=$_POST["name4"];
+			isset($_POST["name2"])?$name2=$_POST["name2"]:$name2="";
+			isset($_POST["name3"])?$name3=$_POST["name3"]:$name3="";
+			isset($_POST["name4"])?$name4=$_POST["name4"]:$name4="";
 			$age1=$_POST["age1"];
-			$age2=$_POST["age1"];
-			$age3=$_POST["age3"];
-			$age4=$_POST["age4"];
+			isset($_POST["age2"])?$age2=$_POST["age2"]:$age2="";
+			isset($_POST["age3"])?$age3=$_POST["age3"]:$age3="";
+			isset($_POST["age4"])?$age4=$_POST["age4"]:$age4="";
 			$gender1=$_POST["GENDER1"];
-			$gender2=$_POST["GENDER2"];
-			$gender3=$_POST["GENDER3"];
-			$gender4=$_POST["GENDER4"];
+			isset($_POST["GENDER2"])?$gender2=$_POST["GENDER2"]:$gender2="";
+			isset($_POST["GENDER3"])?$gender3=$_POST["GENDER3"]:$gender3="";
+			isset($_POST["GENDER4"])?$gender4=$_POST["GENDER4"]:$gender4="";
 			$uid1=$_POST["uid1"];
-			$uid2=$_POST["uid2"];
-			$uid3=$_POST["uid3"];
-			$uid4=$_POST["uid4"];
+			isset($_POST["uid2"])?$uid2=$_POST["uid2"]:$uid2="";
+			isset($_POST["uid3"])?$uid3=$_POST["uid3"]:$uid3="";
+			isset($_POST["uid4"])?$uid4=$_POST["uid4"]:$uid4="";
 	
 			mysql_connect("localhost", "root") or die(mysql_error()); 
 
