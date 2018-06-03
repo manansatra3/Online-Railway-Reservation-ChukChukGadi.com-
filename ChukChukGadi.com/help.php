@@ -8,6 +8,8 @@ $db1="user";
 mysql_select_db($db1) or die(mysql_error());
 $qinsert="insert into feedback values('$name','$phno','$contact_email','$fb_content')";
 mysql_query($qinsert) or die(mysql_error());
-echo "FEEDBACK RECORDED!!"<BR>"THANKYOU!!";
+echo "FEEDBACK RECORDED!!<BR>THANKYOU!!";
 mysql_close();
 ?>
+<br>
+<button><a href="index.html">Home</a></button>
