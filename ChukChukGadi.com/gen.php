@@ -43,7 +43,8 @@ session_start();
 									$_SESSION["pnr1"]=$pnr1;
 									break;
 								case 2:
-								
+								if(isset($_SESSION["panme2"]))
+									{
 									$name2=$_SESSION["panme2"];
 									$age2=$_SESSION["page2"];
 									$puid2=$_SESSION["puid2"];
@@ -52,8 +53,10 @@ session_start();
 									mysql_query($query2) or die (mysql_error()); 
 									$_SESSION["pnr2"]=$pnr2;
 									break;
+									}
 								case 3:
-								
+								if(isset($_SESSION["panme4"]))
+									{
 									$name3=$_SESSION["panme3"];
 									$age3=$_SESSION["page3"];
 									$puid3=$_SESSION["puid3"];
@@ -62,7 +65,10 @@ session_start();
 									mysql_query($query3) or die (mysql_error()); 
 									$_SESSION["pnr3"]=$pnr3;
 									break;
+									}
 								case 4:
+									if(isset($_SESSION["panme4"]))
+									{
 									$name4=$_SESSION["panme4"];
 									$age4=$_SESSION["page4"];
 									$puid4=$_SESSION["puid4"];
@@ -71,7 +77,7 @@ session_start();
 									mysql_query($query4) or die (mysql_error()); 
 									$_SESSION["pnr4"]=$pnr4;
 									break;
-									
+									}
 								}
 
 
@@ -86,6 +92,6 @@ echo '<META HTTP-EQUIV="Refresh" Content="0; URL=final.php">';
 				mysql_close();
 				
 	?>
-	
+	<button><a href="welcome.php">Return to Your Account Page</a></button>
 	</form>
 	</body></html>
