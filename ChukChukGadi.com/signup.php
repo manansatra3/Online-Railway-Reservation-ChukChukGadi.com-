@@ -115,9 +115,9 @@ var letters2 =/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(
 			mysql_select_db($dbase_name) or die(mysql_error()); 
 			
 			$query="insert into logup values('$name',$phone_no,'$email_id','$password')";
-			mysql_query($query) or die (mysql_error());  
-			echo <h1><strong>Welcome $name </strong></h1>;
-			echo <h1><strong>You are now Registered</strong></h1>;
+			mysql_query($query) or die ("<h1>This user is already registered<h1>");  
+			echo "<h1><strong>Welcome $name </strong></h1>";
+			echo "<h1><strong>You are now Registered</strong></h1>";
 			mysql_close();
 
 		?>
